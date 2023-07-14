@@ -16,6 +16,17 @@ class RadioTest {
     }
 
     @Test
+    public void stationCounts() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentStation(7);
+
+        int expected = 7;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void setChannelLowerLimit() {
         Radio radio = new Radio();
 
